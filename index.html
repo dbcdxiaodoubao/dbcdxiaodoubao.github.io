@@ -269,10 +269,11 @@
     </main>
     <script>
         const rail=document.querySelector('.project-rail'), progress=document.querySelector('.project-progress'), fill=document.querySelector('.project-progress-line > span'), reduced=matchMedia('(prefers-reduced-motion: reduce)'), previous=document.querySelector('.project-prev'), next=document.querySelector('.project-next'); let wheelLock=false;
-        function updateProjectProgress(){const total=innerWidth<=768?5:3,current=Math.min(total,Math.round(rail.scrollLeft/rail.clientWidth)+1);progress.textContent=`${String(current).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;fill.style.transform=`scaleX(${current/total})`}
+        function projectPageWidth(){return rail.firstElementChild.getBoundingClientRect().width}
+        function updateProjectProgress(){const total=innerWidth<=768?5:3,current=Math.min(total,Math.round(rail.scrollLeft/projectPageWidth())+1);progress.textContent=`${String(current).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;fill.style.transform=`scaleX(${current/total})`}
         rail.addEventListener('scroll',updateProjectProgress,{passive:true});addEventListener('resize',updateProjectProgress);updateProjectProgress();
-        previous.addEventListener('click',()=>rail.scrollBy({left:-rail.clientWidth,behavior:'smooth'}));next.addEventListener('click',()=>rail.scrollBy({left:rail.clientWidth,behavior:'smooth'}));
-        rail.addEventListener('wheel',event=>{if(reduced.matches||innerWidth<=768||wheelLock||Math.abs(event.deltaY)<=Math.abs(event.deltaX))return;const start=rail.scrollLeft<=1,end=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-1;if((event.deltaY<0&&start)||(event.deltaY>0&&end))return;event.preventDefault();wheelLock=true;rail.scrollBy({left:(event.deltaY>0?1:-1)*rail.clientWidth,behavior:'smooth'});setTimeout(()=>wheelLock=false,420)},{passive:false});
+        previous.addEventListener('click',()=>rail.scrollBy({left:-projectPageWidth(),behavior:'smooth'}));next.addEventListener('click',()=>rail.scrollBy({left:projectPageWidth(),behavior:'smooth'}));
+        rail.addEventListener('wheel',event=>{if(reduced.matches||innerWidth<=768||wheelLock||Math.abs(event.deltaY)<=Math.abs(event.deltaX))return;const start=rail.scrollLeft<=1,end=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-1;if((event.deltaY<0&&start)||(event.deltaY>0&&end))return;event.preventDefault();wheelLock=true;rail.scrollBy({left:(event.deltaY>0?1:-1)*projectPageWidth(),behavior:'smooth'});setTimeout(()=>wheelLock=false,420)},{passive:false});
     </script>
     <footer class="site-footer">&copy; 2026 邹子豪 · Built as a static GitHub Pages portfolio.</footer>
 </body>
