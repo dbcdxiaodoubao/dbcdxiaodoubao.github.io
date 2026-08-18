@@ -131,6 +131,10 @@
         .project-art-ordering::before { width: 140px; height: 140px; left: 55px; top: 15px; border: 20px solid #c27047; border-radius: 50%; }
         .project-art-ordering::after { width: 190px; height: 190px; right: 12px; top: 58px; background: #e5bb77; border-radius: 50%; }
         .project-art-ordering span { width: 55px; height: 55px; right: 96px; top: 38px; border: 9px solid #fff7e7; border-radius: 50%; }
+        .project-art-doudizhu { background:#e8edf7; }
+        .project-art-doudizhu::before { width:150px; height:190px; left:70px; top:18px; border:14px solid #426a9a; border-radius:18px; transform:rotate(-12deg); }
+        .project-art-doudizhu::after { width:150px; height:190px; left:165px; top:10px; border:14px solid #d36d52; border-radius:18px; transform:rotate(12deg); }
+        .project-art-doudizhu span { width:70px; height:70px; right:72px; top:40px; border-radius:50%; background:#f2c879; }
         .project-body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
         .project-number { color: var(--sage); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; }
         .project-card h3 { margin: 7px 0 10px; font-family: var(--serif); font-size: 1.35rem; letter-spacing: -0.03em; }
@@ -240,14 +244,18 @@
                     <div class="project-body"><div class="project-number">03 / AI MONITORING</div><h3>吸烟行为检测系统</h3><p class="desc">校园无烟行为监测平台，支持图片与视频流识别、实时预警、统计可视化，并通过 GLM-4-Flash 生成事件分析与处置建议。</p><div class="tech-stack"><span class="tech-tag">Spring Boot</span><span class="tech-tag">WebSocket</span><span class="tech-tag">Vue 3</span><span class="tech-tag">YOLO</span><span class="tech-tag">HLS</span><span class="tech-tag">GLM-4-Flash</span><span class="tech-tag">Redis</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/smoking_identification" target="_blank" rel="noopener">查看源码</a></div>
                 </article>
                 <article class="project-card">
-                    <div class="project-art project-art-learning" aria-hidden="true"><span></span></div>
-                    <div class="project-body"><div class="project-number">04 / BACKEND PLATFORM</div><h3>教学管理平台</h3><p class="desc">基于 RuoYi 二次开发的教学管理后端，面向学生、教师和管理员提供接口，包含智能阅卷、错题集、知识点树、权限控制与定时任务。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">RuoYi</span><span class="tech-tag">Spring Security</span><span class="tech-tag">MyBatis-Plus</span><span class="tech-tag">EasyExcel</span><span class="tech-tag">Quartz</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/jiaoxueguanlipingtai" target="_blank" rel="noopener">查看源码</a></div>
+                    <div class="project-art project-art-doudizhu" aria-hidden="true"><span></span></div>
+                    <div class="project-body"><div class="project-number">04 / GAME SERVER</div><h3>多人联机斗地主服务端 Demo</h3><p class="desc">C++ 实现游戏网关、TCP 通信、房间管理和完整牌局规则；Java Spring Boot 实现账号数据与业务接口，并通过 Docker Compose 编排服务。</p><div class="tech-stack"><span class="tech-tag">C++</span><span class="tech-tag">CMake</span><span class="tech-tag">TCP Socket</span><span class="tech-tag">Protocol Buffers</span><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">MySQL</span><span class="tech-tag">Docker Compose</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/dodizhu" target="_blank" rel="noopener">查看源码</a></div>
                 </article>
                 </div>
                 <div class="project-page">
                 <article class="project-card">
                     <div class="project-art project-art-ordering" aria-hidden="true"><span></span></div>
                     <div class="project-body"><div class="project-number">05 / SAAS SYSTEM</div><h3>SaaS 桌面点餐管理平台</h3><p class="desc">基于 RuoYi 的 SaaS 桌面点餐管理平台，包含点餐业务模块、后台权限与系统管理、Vue 管理端、定时任务，并集成支付宝支付 SDK。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Vue 2</span><span class="tech-tag">Element UI</span><span class="tech-tag">Quartz</span><span class="tech-tag">支付宝 SDK</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/saas-" target="_blank" rel="noopener">查看源码</a></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-art project-art-learning" aria-hidden="true"><span></span></div>
+                    <div class="project-body"><div class="project-number">05 / BACKEND PLATFORM</div><h3>教学管理平台</h3><p class="desc">基于 RuoYi 二次开发的教学管理后端，面向学生、教师和管理员提供接口，包含智能阅卷、错题集、知识点树、权限控制与定时任务。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">RuoYi</span><span class="tech-tag">Spring Security</span><span class="tech-tag">MyBatis-Plus</span><span class="tech-tag">EasyExcel</span><span class="tech-tag">Quartz</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/jiaoxueguanlipingtai" target="_blank" rel="noopener">查看源码</a></div>
                 </article>
                 </div>
             </div><div class="project-pagination" aria-live="polite"><span class="project-progress">01 / 03</span><span class="project-progress-line" aria-hidden="true"><span></span></span><div class="project-controls"><button class="project-control project-prev" type="button" aria-label="查看上一个项目">&larr;</button><button class="project-control project-next" type="button" aria-label="查看下一个项目">&rarr;</button></div></div>
