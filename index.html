@@ -250,12 +250,12 @@
                 </div>
                 <div class="project-page">
                 <article class="project-card">
-                    <div class="project-art project-art-ordering" aria-hidden="true"><span></span></div>
-                    <div class="project-body"><div class="project-number">06 / SAAS SYSTEM</div><h3>SaaS 桌面点餐管理平台</h3><p class="desc">基于 RuoYi 的 SaaS 桌面点餐管理平台，包含点餐业务模块、后台权限与系统管理、Vue 管理端、定时任务，并集成支付宝支付 SDK。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Vue 2</span><span class="tech-tag">Element UI</span><span class="tech-tag">Quartz</span><span class="tech-tag">支付宝 SDK</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/saas-" target="_blank" rel="noopener">查看源码</a></div>
-                </article>
-                <article class="project-card">
                     <div class="project-art project-art-learning" aria-hidden="true"><span></span></div>
                     <div class="project-body"><div class="project-number">05 / BACKEND PLATFORM</div><h3>教学管理平台</h3><p class="desc">基于 RuoYi 二次开发的教学管理后端，面向学生、教师和管理员提供接口，包含智能阅卷、错题集、知识点树、权限控制与定时任务。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">RuoYi</span><span class="tech-tag">Spring Security</span><span class="tech-tag">MyBatis-Plus</span><span class="tech-tag">EasyExcel</span><span class="tech-tag">Quartz</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/jiaoxueguanlipingtai" target="_blank" rel="noopener">查看源码</a></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-art project-art-ordering" aria-hidden="true"><span></span></div>
+                    <div class="project-body"><div class="project-number">06 / SAAS SYSTEM</div><h3>SaaS 桌面点餐管理平台</h3><p class="desc">基于 RuoYi 的 SaaS 桌面点餐管理平台，包含点餐业务模块、后台权限与系统管理、Vue 管理端、定时任务，并集成支付宝支付 SDK。</p><div class="tech-stack"><span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Vue 2</span><span class="tech-tag">Element UI</span><span class="tech-tag">Quartz</span><span class="tech-tag">支付宝 SDK</span></div><a class="project-link" href="https://github.com/dbcdxiaodoubao/saas-" target="_blank" rel="noopener">查看源码</a></div>
                 </article>
                 </div>
             </div><div class="project-pagination" aria-live="polite"><span class="project-progress">01 / 03</span><span class="project-progress-line" aria-hidden="true"><span></span></span><div class="project-controls"><button class="project-control project-prev" type="button" aria-label="查看上一个项目">&larr;</button><button class="project-control project-next" type="button" aria-label="查看下一个项目">&rarr;</button></div></div>
@@ -278,7 +278,7 @@
     <script>
         const rail=document.querySelector('.project-rail'), progress=document.querySelector('.project-progress'), fill=document.querySelector('.project-progress-line > span'), reduced=matchMedia('(prefers-reduced-motion: reduce)'), previous=document.querySelector('.project-prev'), next=document.querySelector('.project-next'); let wheelLock=false, projectPage=0;
         function projectPageWidth(){return innerWidth<=768?rail.clientWidth:rail.firstElementChild.getBoundingClientRect().width}
-        function projectTotal(){return innerWidth<=768?5:3}
+        function projectTotal(){return innerWidth<=768?6:3}
         function updateProjectProgress(){projectPage=Math.min(projectTotal()-1,Math.max(0,Math.round(rail.scrollLeft/projectPageWidth())));const current=projectPage+1,total=projectTotal();progress.textContent=`${String(current).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;fill.style.transform=`scaleX(${current/total})`}
         function goToProjectPage(page){projectPage=Math.min(projectTotal()-1,Math.max(0,page));rail.scrollTo({left:projectPage*projectPageWidth(),behavior:'smooth'});updateProjectProgress()}
         rail.addEventListener('scroll',updateProjectProgress,{passive:true});addEventListener('resize',updateProjectProgress);updateProjectProgress();
